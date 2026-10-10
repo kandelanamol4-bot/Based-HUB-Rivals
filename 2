@@ -1,0 +1,71 @@
+-- Obfuscated Useing Based Obfuscator v.1.0.0
+
+local ab = {
+  [==[vSRL0$nRJQ*+d&BY~3]q:~v?Uk2An)MX,&haEh#-_c=(yJW66mp.Nb-6jRH1%Va8?d|rX_8isKQl.ElNH3(Nb8A-|f\x:V]==],
+  [==[gQDs"<`A=lx4VI5kqtO@.UjfFQ&TbD@kz;ZJ7|r]P&0rj8IX')d?B6|:[f:'uKT41LlhK~)nfZCo~']8:%xmUx4qo'N4*)fwFp$n_0>!xzXG4NrG]==],
+  [==[4,o|Nm+sgnFT$Oa$=&{cWp6]sOO@.}icHR&=b%Aj|[Yg8'u\R<1smaJL(?e^BV}@]X:PwxSu1Fn1Lk+setCM#r_H;'yMU]==],
+  [==[do7Mj+GhmED$q_F>T{{Xc5^qdPx.4kaI$'ua^?S|o[*8&u^QD0fk"J8'Zd&A%}Z\g:%vBUB1rnnK1)TfeCu!5_2;Fy[V65zo6O2-,gRF_%f_'>xz#Y!5TrCPB-ZiWGI&Aba@A{eYa7euPQG/[lKK.(;cEC3!o]};jv[Tl3RnNKt*xexEa#H^=<]==],
+  [===[gEc$8a)=p{TWL57sdO_->k+Ht&HaC@r|[YI7-srS!/'kcK/'{dKCm}h[C;fuLUx2@n$LQ)$eqCF"N]/;hx|Un3}q;Nz+Lg~G2$d_==g{qXE6Qq~Q6-zk-IJ&ta3@@|hY$7OteR%08k_JR')c>BV!_[U;}u1SI1dmtK"*]===],
+  [=[^2innNu,!f<E8$j__<~ynWm4sq{O(.ti0H0$~`-@!z$]=]
+}
+local _ia = #ab[1] * 0x3 + #ab[#ab] + 0x11
+local RY16 = { 0b1001101000000110100, 0xe2927, 0b111000011110001, 0b100001011010100001, 0b1001101001101000101 }
+local _ZG = { 0b1010100, 0b1000110, 0x13, 0x31, 0x7, 0b1010010 }
+local _L2 = (RY16[0b1] % 0xfb) + 0x1
+local CWLB6 = (RY16[0x2] % 0xfb) + 0x1
+local zK = (RY16[0b11] % 0b1111111) + 0x1
+local Yp7 = (RY16[0b100] % 0b1011101) + 0b1
+local f0F3H = (RY16[0b101] % 0x5d) + 0b1
+local _hD, _E7, _060A7 = string.char, string.byte, table.concat
+local B91 = 0b111101010000110 * 0b101100 + 0x350
+if (B91 * B91) % 0x4 == 0x3 then
+  local W6a, _S = {}, {}
+  for H60 = 0b1, #ab[0x1] do
+    W6a[H60] = _hD(0b100001 + (_E7(ab[0b1], H60) - 0b100001 + Yp7) % 0b1011110)
+  end
+  _S[0b1] = _060A7(W6a)
+  error(_S[0b1])
+end
+local _pA = {}
+for _x9L = 0x1, #ab do
+  local WenYW = ab[_x9L]
+  local s3 = _ZG[_x9L]
+  local c1J = {}
+  for bh = 0b1, #WenYW do
+    c1J[bh] = _hD(0x21 + (_E7(WenYW, bh) - 0b100001 - Yp7 - bh * f0F3H - s3) % 0b1011110)
+  end
+  _pA[_x9L] = _060A7(c1J)
+end
+local _47Xli = _060A7(_pA)
+local _8vR = {}
+for H60 = 0b10, #_47Xli, 0b10 do
+  local _38 = H60 / 0x2
+  _8vR[_38] = _hD(((_E7(_47Xli, H60 - 0x1) - 0b100001) * 0x5e + _E7(_47Xli, H60) - 0b100001 - _L2 - CWLB6 * _38 - (_38 * _38 % 0b11111011) * zK) % 0b100000000)
+end
+local oY = _060A7(_8vR)
+local _Ni9v, _64wQ = 0b0, 0b0
+for H60 = 0x1, #oY do
+  local _IFm = _E7(oY, H60)
+  _Ni9v = (_Ni9v * 0b11111 + _IFm) % 0x80000000
+  _64wQ = (_64wQ + _IFm) % 0b1111111111110001
+end
+if #oY ~= 0x158 or _Ni9v ~= 0b1001111111101100111011000110100 or _64wQ ~= 0b111001110000000 then error('bad') end
+if type(_hD(0b1000001)) ~= 'string' or _hD(0b1000001) ~= 'A' or _E7('A') ~= 0b1000001 then error('bad') end
+local _Q4 = debug
+if type(_Q4) == 'table' and type(_Q4.gethook) == 'function' then
+  local pBY, lt3b = pcall(_Q4.gethook)
+  if pBY and type(lt3b) == 'function' then error('bad') end
+end
+if _E7('AZ', 0x1, 0x2) ~= 0x41 or _hD(0x41, 0x5a) ~= 'AZ' or _060A7({ 'A', 'Z' }) ~= 'AZ' then error('bad') end
+if string.len('AZ') ~= 0x2 or string.sub('AZ', 0x1, 0x1) ~= 'A' or string.reverse('AZ') ~= 'ZA' then error('bad') end
+local x2E = getmetatable and getmetatable('')
+if type(x2E) == 'table' and x2E.__index ~= nil and x2E.__index ~= string then error('bad') end
+if type(pcall) ~= 'function' or type(select) ~= 'function' or type(rawget) ~= 'function' then error('bad') end
+local _t = loadstring or load
+if type(_t) ~= 'function' then error('bad') end
+local cfTL9X = _t('return 0x2a + 0x0')
+if type(cfTL9X) ~= 'function' or cfTL9X() ~= 0x2a then error('bad') end
+local _k = _t(oY)
+if not _k then error('bad') end
+if setfenv and getfenv then pcall(setfenv, _k, getfenv()) end
+_k()
