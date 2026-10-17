@@ -18475,7 +18475,6 @@ Config = v119.appendPath(arg2, "Offset"),
 })
 
 arg:AddSlider({ Label = "Text Size", Min = v86[133], Max = 28, Config = v119.appendPath(arg2, "Size") })
-arg:AddDropdown({ Label = "Font", Options = v115.Order, Config = v119.appendPath(arg2, v86[59]) })
 end
 
 return function(arg, arg2, arg3, arg4, arg5, arg6, arg7)
